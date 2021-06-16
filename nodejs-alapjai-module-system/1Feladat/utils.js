@@ -5,8 +5,6 @@ const increaseDate = (date, dayNumber=3) => {
     return  newDate.getTime();
 }
 
-console.log(increaseDate(new Date('July 20, 21 00:20:18 GMT+00:00')));
-
 const increaseAndFormatDate = (dates) => {
    return dates.map(d => new Date(increaseDate(d)).toLocaleDateString('hu-HU', 
     {year: 'numeric', month: 'long', day: 'numeric'}));
