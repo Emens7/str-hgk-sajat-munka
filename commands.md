@@ -1,4 +1,3 @@
-# str-hgk-sajat-munka
 # Első feladat:
 ```
 node -v
