@@ -7,6 +7,13 @@ const generateUserList = (users) => {
     });
 }
 
-module.exports = Object.freeze({
-    generateUserList
-})
+const getUserNames = (users) => users.map(item => `${item.lastName} ${item.firstName}`).join(',')
+
+
+Object.freeze(generateUserList);
+Object.freeze(getUserNames);
+
+module.exports = {
+    generateUserList,
+    getUserNames
+};
