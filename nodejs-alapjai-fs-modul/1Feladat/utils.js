@@ -14,4 +14,4 @@ const createStarterTemplate = () => {
     .catch( (err) => console.log('\x1b[31m', err.message))
 }
 
-module.exports = createStarterTemplate
+module.exports = { createStarterTemplate }
