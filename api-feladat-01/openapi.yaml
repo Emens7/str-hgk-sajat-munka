@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: ESZT (Egészségügyi Szuri Tár) API
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080
+paths:
+  /person/count:
+    get:
+      summary: A beoltottak száma
+      responses:
+        '200':
+          description: A beoltottak számát tartalmazó objektum
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  number_of_vaccinated:
+                    type: number
+  /person/vaccinated:
+    get:
+      summary: A beoltottak listája
+      responses:
+        '200':
+          description: A beoltottak listáját tartalmazó tömb
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: number
+                    first_name:
+                      type: string
+                    last_name:
+                      type: string
+                    vaccine:
+                      type: string
