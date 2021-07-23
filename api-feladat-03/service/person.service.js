@@ -7,6 +7,12 @@ const getAll = async () => {
     return JSON.parse(content);
 }
 
+const personId = async (id) => {
+    const persons = await getAll();
+    const personsIndex = persons.findIndex((p) => p.id === id);
+    return persons[personsIndex];
+}
+
 const update = async (id, person) => {
     const people = await getAll();
     const personIndex = people.findIndex((p) => p.id === id);
@@ -70,5 +76,7 @@ module.exports = {
     isVaccinated,
     addPerson,
     update,
-    del
+    del,
+    getAll,
+    personId
 }
